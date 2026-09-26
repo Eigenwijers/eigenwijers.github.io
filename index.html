@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eigenwijers | Marcel Wijers</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #263238;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #17324d;
+      color: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 15px;
+    }
+
+    .hero {
+      padding: 110px 8%;
+      background: #f3f5f6;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      margin: 0 0 15px;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      color: #17324d;
+    }
+
+    .hero h2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin: 0 0 30px;
+      color: #52606a;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 19px;
+    }
+
+    .accent {
+      color: #16866f;
+    }
+
+    .section {
+      padding: 75px 8%;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #17324d;
+      font-size: 32px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      border-top: 4px solid #16866f;
+      padding: 25px 5px;
+    }
+
+    .card h3 {
+      color: #17324d;
+      font-size: 21px;
+    }
+
+    .eigenwijze {
+      background: #17324d;
+      color: white;
+      padding: 75px 8%;
+    }
+
+    .eigenwijze div {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .eigenwijze h2 {
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    .quote {
+      font-size: 25px;
+      line-height: 1.5;
+      max-width: 850px;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 70px 8%;
+    }
+
+    .contact a {
+      color: #16866f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #f3f5f6;
+      color: #65727a;
+      font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">EIGEN<span class="accent">WIJERS</span></div>
+  <nav>
+    <a href="#over">Over mij</a>
+    <a href="#werk">Mijn werk</a>
+    <a href="#eigenwijze">Eigen wijze</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Plannen.<br>Verbeteren.<br><span class="accent">Vooruitkijken.</span></h1>
+    <h2>En soms gewoon even eigenwijs zijn.</h2>
+
+    <p>
+      Ik ben Marcel Wijers. Planner in hart en nieren, met een voorliefde
+      voor processen die logisch werken, mensen die weten waarom ze iets doen
+      en oplossingen die het werk daadwerkelijk makkelijker maken.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="werk">
+  <h2>Waar ik me graag mee bezighoud</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Plannen & organiseren</h3>
+      <p>
+        Van dagelijkse operationele planning tot project- en capaciteitsplanning.
+        Niet alleen zorgen dat het vandaag past, maar vooral kijken hoe het
+        morgen beter kan.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Processen verbeteren</h3>
+      <p>
+        Ik zie snel waar processen onnodig ingewikkeld worden.
+        Lean, PDCA en automatisering zijn voor mij geen doel op zich.
+        Ze moeten ervoor zorgen dat mensen hun werk beter kunnen doen.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Mensen meenemen</h3>
+      <p>
+        Een goede planning ontstaat niet alleen achter een beeldscherm.
+        Ik werk graag met mensen, stel vragen, draag kennis over
+        en geef ruimte om verantwoordelijkheid te nemen.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="eigenwijze" id="eigenwijze">
+  <div>
+    <h2>Mijn eigen wijze</h2>
+
+    <p class="quote">
+      “Omdat de gebruikelijke manier niet automatisch de beste manier is.”
+    </p>
+
+    <p>
+      Waarom doen we dingen zoals we ze doen? Kan het eenvoudiger?
+      Slimmer? Of vooral logischer? Dat zijn vragen die ik graag stel.
+    </p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Kennismaken?</h2>
+  <p>
+    <a href="mailto:marcel@eigenwijers.nl">marcel@eigenwijers.nl</a>
+  </p>
+</section>
+
+<footer>
+  © 2026 Marcel Wijers · eigenwijers.nl
+</footer>
+
+</body>
+</html>
