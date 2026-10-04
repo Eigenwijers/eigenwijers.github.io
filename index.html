@@ -40,6 +40,10 @@
       font-size: 15px;
     }
 
+    nav a:hover {
+      color: #7dd3c2;
+    }
+
     .hero {
       padding: 110px 8%;
       background: #f3f5f6;
@@ -122,6 +126,43 @@
       max-width: 850px;
     }
 
+    .buitenwerk {
+      padding: 80px 8%;
+      text-align: center;
+      background: #f3f5f6;
+    }
+
+    .buitenwerk-content {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .buitenwerk h2 {
+      color: #17324d;
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    .buitenwerk p {
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background: #16866f;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 3px;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
     .contact {
       text-align: center;
       padding: 70px 8%;
@@ -154,6 +195,11 @@
         padding-top: 70px;
         padding-bottom: 70px;
       }
+
+      .buitenwerk {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
     }
   </style>
 </head>
@@ -161,19 +207,28 @@
 <body>
 
 <header>
-  <div class="logo">EIGEN<span class="accent">WIJERS</span></div>
+  <div class="logo">
+    EIGEN<span class="accent">WIJERS</span>
+  </div>
+
   <nav>
-  <a href="#over">Over mij</a>
-  <a href="#werk">Mijn werk</a>
-  <a href="#eigenwijze">Eigen wijze</a>
-  <a href="buiten-het-werk.html">Buiten het werk</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <a href="#over">Over mij</a>
+    <a href="#werk">Mijn werk</a>
+    <a href="#eigenwijze">Eigen wijze</a>
+    <a href="buiten-het-werk.html">Buiten het werk</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="over">
   <div class="hero-content">
-    <h1>Plannen.<br>Verbeteren.<br><span class="accent">Vooruitkijken.</span></h1>
+
+    <h1>
+      Plannen.<br>
+      Verbeteren.<br>
+      <span class="accent">Vooruitkijken.</span>
+    </h1>
+
     <h2>En soms gewoon even eigenwijs zijn.</h2>
 
     <p>
@@ -181,15 +236,19 @@
       voor processen die logisch werken, mensen die weten waarom ze iets doen
       en oplossingen die het werk daadwerkelijk makkelijker maken.
     </p>
+
   </div>
 </section>
 
 <section class="section" id="werk">
+
   <h2>Waar ik me graag mee bezighoud</h2>
 
   <div class="cards">
+
     <div class="card">
       <h3>Plannen & organiseren</h3>
+
       <p>
         Van dagelijkse operationele planning tot project- en capaciteitsplanning.
         Niet alleen zorgen dat het vandaag past, maar vooral kijken hoe het
@@ -199,6 +258,7 @@
 
     <div class="card">
       <h3>Processen verbeteren</h3>
+
       <p>
         Ik zie snel waar processen onnodig ingewikkeld worden.
         Lean, PDCA en automatisering zijn voor mij geen doel op zich.
@@ -208,17 +268,21 @@
 
     <div class="card">
       <h3>Mensen meenemen</h3>
+
       <p>
         Een goede planning ontstaat niet alleen achter een beeldscherm.
         Ik werk graag met mensen, stel vragen, draag kennis over
         en geef ruimte om verantwoordelijkheid te nemen.
       </p>
     </div>
+
   </div>
 </section>
 
 <section class="eigenwijze" id="eigenwijze">
+
   <div>
+
     <h2>Mijn eigen wijze</h2>
 
     <p class="quote">
@@ -229,14 +293,41 @@
       Waarom doen we dingen zoals we ze doen? Kan het eenvoudiger?
       Slimmer? Of vooral logischer? Dat zijn vragen die ik graag stel.
     </p>
+
+  </div>
+</section>
+
+<section class="buitenwerk">
+
+  <div class="buitenwerk-content">
+
+    <h2>En buiten het werk?</h2>
+
+    <p>
+      Er is natuurlijk meer dan plannen en processen.
+      Buiten het werk vind je me regelmatig in de keuken of bij de BBQ.
+      Bakken is een oude liefde en bij de barbecue draait het voor mij
+      om tijd, vuur, aandacht en vooral genieten van wat er uiteindelijk
+      op tafel komt.
+    </p>
+
+    <a class="button" href="buiten-het-werk.html">
+      Bekijk Buiten het werk
+    </a>
+
   </div>
 </section>
 
 <section class="contact" id="contact">
+
   <h2>Kennismaken?</h2>
+
   <p>
-    <a href="mailto:marcel@eigenwijers.nl">marcel@eigenwijers.nl</a>
+    <a href="mailto:marcel@eigenwijers.nl">
+      marcel@eigenwijers.nl
+    </a>
   </p>
+
 </section>
 
 <footer>
