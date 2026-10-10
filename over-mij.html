@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eigenwijers | Marcel Wijers</title>
+  <title>Over mij | Marcel Wijers</title>
+  <meta name="description" content="Maak kennis met Marcel Wijers. Over mijn gezin, mijn thuis in Meerhoven en de dingen waarvan ik geniet.">
 
   <style>
     * {
@@ -240,140 +241,86 @@
       }
       header nav a { flex-shrink: 0; }
     }
+
+    .personal-hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; align-items: center; }
+    .personal-hero img { width: 100%; max-width: 330px; max-height: 460px; object-fit: cover; border-radius: 6px; }
+    .personal-intro { max-width: 760px; font-size: 19px; }
+    .personal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+    figure { margin: 0; }
+    .personal-grid img { width: 100%; height: auto; border-radius: 6px; display: block; }
+    .personal-grid .portrait img { max-height: 420px; object-fit: contain; background: #f3f5f6; }
+    figcaption { color: #52606a; font-size: 15px; margin-top: 10px; }
+    .personal-band { background: #f3f5f6; }
+    .family { border-left: 4px solid #16866f; padding-left: 24px; }
+    @media (max-width: 750px) {
+      .personal-hero, .personal-grid { grid-template-columns: 1fr; gap: 24px; }
+      .personal-hero img { max-width: 280px; }
+    }
   </style>
 </head>
 
 <body>
-
 <header>
-  <div class="logo">
-    EIGEN<span class="accent">WIJERS</span>
-  </div>
+  <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">EIGEN<span class="accent">WIJERS</span></a></div>
 
-  <nav>
+  <nav aria-label="Hoofdnavigatie">
     <a href="over-mij.html">Over mij</a>
-    <a href="#werk">Mijn werk</a>
-    <a href="#eigenwijze">Eigen wijze</a>
+    <a href="index.html#werk">Mijn werk</a>
+    <a href="index.html#eigenwijze">Eigen wijze</a>
     <a href="buiten-het-werk.html">Buiten het werk</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
-
-<section class="hero" id="over">
-  <div class="hero-content">
-
-    <h1>
-      Plannen.<br>
-      Verbeteren.<br>
-      <span class="accent">Vooruitkijken.</span>
-    </h1>
-
-    <h2>En soms gewoon even eigenwijs zijn.</h2>
-
-    <p>
-      Ik ben Marcel Wijers. Planner in hart en nieren, met een voorliefde
-      voor processen die logisch werken, mensen die weten waarom ze iets doen
-      en oplossingen die het werk daadwerkelijk makkelijker maken.
-    </p>
-
-  </div>
-</section>
-
-<section class="section" id="werk">
-
-  <h2>Waar ik me graag mee bezighoud</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Plannen & organiseren</h3>
-
-      <p>
-        Van dagelijkse operationele planning tot project- en capaciteitsplanning.
-        Niet alleen zorgen dat het vandaag past, maar vooral kijken hoe het
-        morgen beter kan.
-      </p>
+<section class="hero">
+  <div class="personal-hero">
+    <div class="hero-content">
+      <h1>Dit ben<br><span class="accent">ik.</span></h1>
+      <h2>Marcel. Ook buiten het werk.</h2>
+      <p>Plannen en verbeteren horen bij mij. Maar als je mij wilt leren kennen, hoort daar ook mijn leven buiten het werk bij. Mijn gezin, mijn thuis, Jip en de dingen waar ik plezier aan beleef.</p>
     </div>
-
-    <div class="card">
-      <h3>Processen verbeteren</h3>
-
-      <p>
-        Ik zie snel waar processen onnodig ingewikkeld worden.
-        Lean, PDCA en automatisering zijn voor mij geen doel op zich.
-        Ze moeten ervoor zorgen dat mensen hun werk beter kunnen doen.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Mensen meenemen</h3>
-
-      <p>
-        Een goede planning ontstaat niet alleen achter een beeldscherm.
-        Ik werk graag met mensen, stel vragen, draag kennis over
-        en geef ruimte om verantwoordelijkheid te nemen.
-      </p>
-    </div>
-
+    <figure><img src="Images/prive/marcel-50.jpg" alt="Marcel met een pet en blauwe jas" width="640" height="960"></figure>
   </div>
 </section>
-
-<section class="eigenwijze" id="eigenwijze">
-
-  <div>
-
-    <h2>Mijn eigen wijze</h2>
-
-    <p class="quote">
-      “Omdat de gebruikelijke manier niet automatisch de beste manier is.”
-    </p>
-
-    <p>
-      Waarom doen we dingen zoals we ze doen? Kan het eenvoudiger?
-      Slimmer? Of vooral logischer? Dat zijn vragen die ik graag stel.
-    </p>
-
+<section class="section">
+  <h2>Mijn gezin</h2>
+  <div class="personal-intro family">
+    <p>Ik ben vader van Jeske, Wytze en Thije. Mijn kinderen horen bij mijn verhaal, net als mijn partner Anna-Sophie. Daarom krijgen zij hier een plek, op een pagina die echt over mij gaat.</p>
+    <p>Wederzijds respect vind ik belangrijk. En erkenning geven aan wie die verdient. Dat zijn waarden die ik meeneem, thuis en in mijn omgang met anderen.</p>
   </div>
 </section>
-
-<section class="buitenwerk">
-
-  <div class="buitenwerk-content">
-
-    <h2>En buiten het werk?</h2>
-
-    <p>
-      Er is natuurlijk meer dan plannen en processen.
-      Buiten het werk vind je me regelmatig in de keuken of bij de BBQ.
-      Bakken is een oude liefde en bij de barbecue draait het voor mij
-      om tijd, vuur, aandacht en vooral genieten van wat er uiteindelijk
-      op tafel komt.
-    </p>
-
-    <a class="button" href="buiten-het-werk.html">
-      Bekijk Buiten het werk
-    </a>
-
+<div class="personal-band">
+<section class="section">
+  <h2>Mijn thuis in Meerhoven</h2>
+  <div class="personal-intro"><p>Ik woon in Meerhoven, in Eindhoven, bij park Meerland. Hieronder een kijkje naar mijn huis en de omgeving. Met Jip, onze bobtail, ga ik hier regelmatig wandelen.</p></div>
+  <div class="personal-grid">
+    <figure class="portrait"><img src="Images/prive/huis.jpg" alt="Het huis van Marcel" loading="lazy"><figcaption>Mijn thuis.</figcaption></figure>
+    <figure><img src="Images/prive/omgeving-1.jpg" alt="Een wandelpad door de groene woonomgeving" loading="lazy"><figcaption>Groen dicht bij huis.</figcaption></figure>
+    <figure><img src="Images/prive/jip.jpg" alt="Bobtail Jip op het terras" loading="lazy"><figcaption>Jip, onze bobtail.</figcaption></figure>
+    <figure><img src="Images/prive/omgeving-4.jpg" alt="Een kleurrijke lucht boven de woonomgeving" loading="lazy"><figcaption>De lucht boven mijn woonomgeving.</figcaption></figure>
   </div>
 </section>
-
-<section class="contact" id="contact">
-
-  <h2>Kennismaken?</h2>
-
-  <p>
-    <a href="contact.html">
-      Stuur me een bericht via het contactformulier
-    </a>
-  </p>
-
+</div>
+<section class="section">
+  <h2>Een paar stappen terug</h2>
+  <p class="personal-intro">Bij mijn verhaal horen ook foto's van vroeger. Hier ben ik als kind en op mijn achttiende.</p>
+  <div class="personal-grid">
+    <figure class="portrait"><img src="Images/prive/marcel-5.jpg" alt="Marcel als kind, met een hoed en knuffel" loading="lazy"><figcaption>Marcel, 5 jaar.</figcaption></figure>
+    <figure class="portrait"><img src="Images/prive/marcel-18.jpg" alt="Marcel op zijn achttiende aan een tafel" loading="lazy"><figcaption>Marcel, 18 jaar.</figcaption></figure>
+  </div>
 </section>
-
-<footer>
-  © 2026 Marcel Wijers · eigenwijers.nl
-</footer>
-
-
+<div class="personal-band">
+<section class="section">
+  <h2>Waar ik van geniet</h2>
+  <p class="personal-intro">Bakken en barbecueën zijn twee liefhebberijen van mij. Goede ingrediënten, iets zelf maken en genieten van wat er op tafel komt. En een lekkere koffie hoort daar ook bij.</p>
+  <div class="personal-grid">
+    <figure class="portrait"><img src="Images/prive/koffie.jpg" alt="Een glas koffie met melk en een laag schuim" loading="lazy"><figcaption>Even tijd voor koffie.</figcaption></figure>
+    <figure class="portrait"><img src="Images/prive/tattoo.jpg" alt="Een van Marcels tattoos tijdens het tatoeëren" loading="lazy"><figcaption>Een van mijn tattoos.</figcaption></figure>
+  </div>
+  <a class="button" href="buiten-het-werk.html">Meer over bakken en BBQ</a>
+</section>
+</div>
+<section class="contact"><h2>Kennismaken?</h2><p><a href="contact.html">Stuur me een bericht via het contactformulier</a></p></section>
+<footer>© 2026 Marcel Wijers · eigenwijers.nl</footer>
 <script>
   // Gebruik de werkelijke menuhoogte voor links naar secties.
   const siteHeader = document.querySelector('header');
