@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Eigenwijers</title>
+  <meta name="description" content="Neem contact op met Marcel Wijers via Eigenwijers.">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #263238; line-height: 1.6; }
+    header { background: #17324d; color: white; padding: 22px 8%; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .logo { font-size: 24px; font-weight: bold; letter-spacing: 1px; }
+    .logo a { color: white; text-decoration: none; }
+    .accent { color: #16866f; }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-size: 15px; }
+    nav a:hover, nav a[aria-current] { color: #7dd3c2; }
+    .hero { padding: 75px 8%; background: #f3f5f6; }
+    .hero h1 { margin: 0 0 15px; font-size: clamp(40px, 6vw, 65px); line-height: 1.1; color: #17324d; }
+    .hero p { max-width: 760px; font-size: 19px; }
+    main { max-width: 900px; margin: auto; padding: 65px 8% 90px; }
+    main h2 { color: #17324d; font-size: 32px; margin-top: 0; }
+    form { display: grid; gap: 20px; }
+    .names { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    label { color: #17324d; font-weight: bold; }
+    input, textarea { width: 100%; padding: 12px; border: 1px solid #aeb9c1; border-radius: 4px; font: inherit; }
+    input:focus, textarea:focus { outline: 2px solid #16866f; outline-offset: 1px; }
+    textarea { min-height: 180px; resize: vertical; }
+    button { justify-self: start; background: #16866f; color: white; padding: 14px 28px; border: 0; border-radius: 4px; font: inherit; font-weight: bold; cursor: pointer; }
+    button:hover { background: #116b59; }
+    button:disabled { opacity: .6; cursor: wait; }
+    .note { font-size: 14px; color: #52606a; }
+    #form-status { display: none; padding: 14px; border-radius: 4px; }
+    #form-status.success { display: block; background: #edf7f3; color: #175744; }
+    #form-status.error { display: block; background: #fff1ef; color: #922c26; }
+    footer { text-align: center; padding: 25px; background: #f3f5f6; color: #65727a; font-size: 14px; }
+    @media (max-width: 750px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav { gap: 12px; }
+      .names { grid-template-columns: 1fr; }
+      .hero { padding: 55px 8%; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo"><a href="index.html">EIGEN<span class="accent">WIJERS</span></a></div>
+  <nav aria-label="Hoofdnavigatie">
+    <a href="index.html">Home</a>
+    <a href="index.html#werk">Mijn werk</a>
+    <a href="index.html#eigenwijze">Eigen wijze</a>
+    <a href="buiten-het-werk.html">Buiten het werk</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+</header>
+<section class="hero">
+  <h1>Neem <span class="accent">contact op.</span></h1>
+  <p>Een vraag, een idee of gewoon even kennismaken? Stuur me gerust een bericht via onderstaand formulier.</p>
+</section>
+<main>
+  <h2>Stuur een bericht</h2>
+  <p>Alle velden zijn verplicht.</p>
+  <form id="contact-form" action="https://formspree.io/f/mjygrrob" method="POST">
+    <div class="names">
+      <div class="field">
+        <label for="voornaam">Voornaam *</label>
+        <input id="voornaam" name="voornaam" autocomplete="given-name" maxlength="100" required>
+      </div>
+      <div class="field">
+        <label for="achternaam">Achternaam *</label>
+        <input id="achternaam" name="achternaam" autocomplete="family-name" maxlength="100" required>
+      </div>
+    </div>
+    <div class="field">
+      <label for="email">E-mailadres *</label>
+      <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+    </div>
+    <div class="field">
+      <label for="onderwerp">Onderwerp *</label>
+      <input id="onderwerp" name="onderwerp" maxlength="200" required>
+    </div>
+    <div class="field">
+      <label for="bericht">Bericht *</label>
+      <textarea id="bericht" name="message" maxlength="10000" required></textarea>
+    </div>
+    <input type="hidden" name="_subject" value="Nieuw contactbericht via Eigenwijers">
+    <p class="note">Je gegevens worden via Formspree verwerkt om op je bericht te kunnen reageren.</p>
+    <button type="submit" id="send-button">Versturen</button>
+    <p id="form-status" role="status" aria-live="polite"></p>
+  </form>
+</main>
+<footer>© 2026 Marcel Wijers · eigenwijers.nl</footer>
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  const button = document.getElementById('send-button');
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    button.disabled = true;
+    button.textContent = 'Verzenden…';
+    status.className = '';
+    status.textContent = '';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.reset();
+        status.textContent = 'Bedankt! Je bericht is verzonden. Ik neem zo snel mogelijk contact met je op.';
+        status.className = 'success';
+      } else {
+        status.textContent = 'Het verzenden is niet gelukt. Probeer het later opnieuw.';
+        status.className = 'error';
+      }
+    } catch (error) {
+      status.textContent = 'Er is een verbindingsprobleem. Probeer het later opnieuw.';
+      status.className = 'error';
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Versturen';
+    }
+  });
+</script>
+</body>
+</html>
