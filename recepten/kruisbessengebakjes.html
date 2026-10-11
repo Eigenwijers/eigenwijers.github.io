@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Harde Wener bakjes met room en kruisbessenjam | Eigenwijers</title><meta name="description" content="Krokante bakjes met banketbakkersroom, kruisbessenjam en Italiaanse meringue."><style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #263238;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #17324d;
+      color: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .accent {
+      color: #16866f;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #7dd3c2;
+    }
+
+    .hero {
+      padding: 100px 8%;
+      background: #f3f5f6;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      margin: 0 0 15px;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.05;
+      color: #17324d;
+    }
+
+    .hero h2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin: 0 0 30px;
+      color: #52606a;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 19px;
+    }
+
+    .section {
+      padding: 80px 8%;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #17324d;
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+
+    .section h3 {
+      color: #16866f;
+      font-size: 22px;
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    .intro {
+      max-width: 780px;
+      font-size: 18px;
+      margin-bottom: 45px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      border-radius: 3px;
+    }
+
+    .gallery img:first-child {
+      grid-column: span 2;
+    }
+
+    .bbq {
+      background: #f3f5f6;
+    }
+
+    .bbq-inner {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .recipes {
+      background: #17324d;
+      color: white;
+      padding: 80px 8%;
+    }
+
+    .recipes-inner {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .recipes h2 {
+      font-size: 36px;
+      margin: 0 0 5px;
+    }
+
+    .recipes h3 {
+      color: #7dd3c2;
+      font-size: 22px;
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    .recipes p {
+      max-width: 780px;
+      font-size: 18px;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 11px 18px;
+      border: 1px solid #7dd3c2;
+      color: #7dd3c2;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #ffffff;
+      color: #65727a;
+      font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 65px;
+        padding-bottom: 65px;
+      }
+
+      .section,
+      .recipes {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img,
+      .gallery img:first-child {
+        grid-column: auto;
+        height: auto;
+      }
+    }
+
+    /* Houd de navigatie bereikbaar tijdens het scrollen. */
+    html { scroll-padding-top: calc(var(--header-height, 100px) + 16px); }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+    }
+    header nav a {
+      margin-left: 0;
+      padding: 6px 0;
+      white-space: nowrap;
+    }
+    header nav a:focus-visible {
+      outline: 2px solid #7dd3c2;
+      outline-offset: 4px;
+    }
+    @media (max-width: 1000px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 8%;
+      }
+      header nav {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 18px;
+      }
+      header nav a { flex-shrink: 0; }
+    }
+  
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:200;background:white;padding:12px}
+main{max-width:1140px;margin:auto;padding:48px 6% 72px}h1{font-size:clamp(30px,5vw,52px);line-height:1.15;color:#17324d;margin:16px 0 20px}h2{color:#17324d;font-size:26px;margin-top:36px}h3{color:#17324d}a{color:#14755f}a:focus-visible,button:focus-visible{outline:3px solid #16866f;outline-offset:4px}.crumb{font-size:15px}.meta{color:#52606a}.intro-recipe{font-size:18px;max-width:780px}.recipe-photo{width:100%;max-height:540px;object-fit:cover;border-radius:4px;margin:20px 0}.recipe-body{max-width:780px}.recipe-body li{padding-left:5px;margin-bottom:12px}.recipe-body ul{padding-left:24px}.recipe-body ol{padding-left:26px}.recipe-body h2{scroll-margin-top:130px}.actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:24px 0}.print{font:inherit;padding:10px 18px;border:1px solid #16866f;border-radius:3px;background:#16866f;color:white;cursor:pointer}.recipe-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:32px}.recipe-card{border:1px solid #dce2e5;border-radius:4px;overflow:hidden;background:white;display:flex;flex-direction:column}.recipe-card img{width:100%;height:230px;object-fit:cover}.recipe-card .content{padding:22px;flex:1}.recipe-card h2{font-size:23px;margin:8px 0 12px}.recipe-card h2 a{text-decoration:none;color:#17324d}.recipe-card h2 a:hover{text-decoration:underline}.category{color:#14755f;font-size:14px}.recipe-card p{margin:0 0 18px}.recipe-card .read{display:inline-block;margin-top:auto}.plain-card{border-top:4px solid #16866f}.cartouche{max-width:650px;width:100%;height:auto;margin-top:20px}.sources{font-size:14px;color:#52606a;overflow-wrap:anywhere}.recipe-links{display:flex;flex-wrap:wrap;gap:12px 20px;padding:16px 0;border-top:1px solid #dce2e5;border-bottom:1px solid #dce2e5}.recipe-links a{font-size:15px}@media(max-width:900px){.recipe-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.recipe-grid{grid-template-columns:1fr}main{padding:32px 6% 48px}.recipe-photo{max-height:400px}}@media print{header,footer,.actions,.crumb,.recipe-links,.back-link,.skip{display:none!important}main{padding:0;max-width:none}.recipe-body{max-width:none}body{font-size:11pt}h1{font-size:24pt}.recipe-photo{max-height:200px;width:auto;max-width:100%}h2,h3{break-after:avoid}li{break-inside:avoid}.cartouche{max-height:600px;max-width:100%;width:auto}a{color:inherit}}
+</style></head><body><a class="skip" href="#inhoud">Ga naar inhoud</a><header><div class="logo"><a href="../index.html">EIGEN<span class="accent">WIJERS</span></a></div><nav aria-label="Hoofdnavigatie"><a href="../index.html">Home</a><a href="../over-mij.html">Over mij</a><a href="../buiten-het-werk.html">Buiten het werk</a><a href="../recepten.html">Recepten</a><a href="../contact.html">Contact</a></nav></header><main id="inhoud"><p class="crumb"><a href="../recepten.html">Recepten</a> / Bakken</p><article><h1>Harde Wener bakjes met room en kruisbessenjam</h1><img class="recipe-photo" src="../Images/recepten/kruisbessengebakje.webp" alt="Harde Wener bakjes met room en kruisbessenjam" width="1200" height="800"><p class="intro-recipe">Tijdens mijn bakkeropleiding en mijn tijd bij bakkerij Van Heeswijk heb ik veel Harde Wener bakjes gebakken. Bij zulke grote hoeveelheden bakten we de vormpjes niet blind. Door opnieuw te proberen en bij te stellen ben ik op dit recept uitgekomen.</p><div class="actions"><a href="#ingredienten">Naar ingrediënten</a><button class="print" type="button">Print dit recept</button></div><div class="recipe-body"><section><h2 id="ingredienten">Harde Wener deeg</h2><ul><li>400 g superpatentbloem</li><li>220 g roomboter met 83% vet</li><li>160 g kristalsuiker</li><li>40 g heel ei, afgewogen zonder schaal</li><li>2 g zout</li><li>1 tl koekkruiden (afhankelijk van de vulling die de bakjes afwerkt)</li></ul><p>Rol het deeg uit tot 3 mm dikte en bekleed de vormpjes. Zet ze op een rooster en zet ze voor het bakken 30 minuten in de vriezer. Zo behouden de bakjes hun vorm en is blindbakken niet nodig.</p><p>Verwarm de oven voor op 210 °C boven- en onderwarmte. Schuif het rooster met de bakjes één richel boven het midden in de oven en zet de temperatuur meteen terug naar 195 °C.</p></section><section><h2>Banketbakkersroom</h2><ul><li>500 ml melk, bij voorkeur volle melk</li><li>100 g suiker</li><li>50 g custardpoeder</li><li>2 eidooiers</li><li>50 g roomboter</li></ul><ol><li>Doe 400 ml melk in een pannetje en breng rustig aan de kook.</li><li>Meng de resterende 100 ml melk met de eidooiers, suiker en custardpoeder tot een egaal papje.</li><li>Giet al roerend een scheut van de kokende melk bij het custardmengsel. Giet vervolgens het mengsel onder goed roeren terug bij de melk in de pan.</li><li>Zet het vuur wat lager en laat de room onder voortdurend roeren 2 minuten doorkoken.</li><li>Neem de pan van het vuur en meng 50 g roomboter door de warme room.</li><li>Giet de room meteen in een schaal. Leg huishoudfolie rechtstreeks op het oppervlak om velvorming te voorkomen. Laat afkoelen en bewaar daarna in de koelkast.</li><li>Klop de afgekoelde room voor gebruik los</li></ol><p>Dit is en basis recept voor 750gram banketbakkersroom, hoeveel room je nodig hebt ligt aan de afwerking. Als je er bijvoorbeeld verse aardbeien op wil leggen heb je meer room nodig dan dat je er een vulling van jam met meringue op doet.</p></section><section><h2>Kruisbessenjam, rabarbercompote (wat zurige vulling)</h2><p>De bakjes worden gecombineerd met kruisbessenjam.</p></section><section><h2>Italiaanse meringue</h2><p>Zorg dat je een goede machine hebt die dit recept goed kan kloppen, het is een zware massa</p><ul><li>105 g eiwit</li><li>Mespuntje zout</li><li>210 g kristalsuiker</li><li>60 g water</li></ul><p>Doe het eiwit en het zout in een vetvrije kom, zorg ook voor een vetvrije garde</p><p>In een pannetje eerst het water, hier voeg je de suiker aan toe</p><p>Verwarm de suikersiroop tot 121°C</p><p>Als de suiker rond de 105°C komt, zet je de machine aan zodat er al wat lucht in het eiwit komt.</p><p>Als de suiker op temperatuur is, zet je de machine op volle snelheid, en voeg de siroop in een dun straaltje toe aan het eiwit.</p><p>Laat de machine net zolang draaien tot het eiwit op kamertemperatuur is.</p><p>Doe de meringue in een spuitzak met kartel spuitje 11 en maak mooie rozetten op het gebakje</p><p>Met een crème-brûléebrander, brandt je de meringue mooi egaal bruin af.</p></section></div></article><p class="back-link"><a href="../recepten.html">← Terug naar alle recepten</a></p></main><footer>© 2026 Marcel Wijers · eigenwijers.nl</footer><script>const siteHeader=document.querySelector('header');const updateHeaderHeight=()=>document.documentElement.style.setProperty('--header-height',siteHeader.offsetHeight+'px');updateHeaderHeight();window.addEventListener('resize',updateHeaderHeight);if('ResizeObserver' in window)new ResizeObserver(updateHeaderHeight).observe(siteHeader);document.querySelector('.print')?.addEventListener('click',()=>window.print());</script></body></html>
