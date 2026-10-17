@@ -242,6 +242,7 @@
       header nav a { flex-shrink: 0; }
     }
   .hero .button { margin-right:12px; } .button-outline { color:#16866f; background:transparent; border:1px solid #16866f; } .text-link { color:#14755f; font-weight:bold; text-decoration:none; } .text-link:hover { text-decoration:underline; } .work-intro { max-width:780px; font-size:18px; }
+.home-intro { max-width:1320px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,340px); align-items:center; gap:56px; } .home-intro .hero-content { max-width:none; min-width:0; } .home-intro h1 { font-size:clamp(36px,4.2vw,64px); } .home-portrait { margin:0; width:100%; } .home-portrait img { display:block; width:100%; aspect-ratio:4 / 5; height:auto; object-fit:cover; object-position:center; border-radius:8px; } @media(max-width:800px) { .home-intro { grid-template-columns:1fr; gap:32px; } .home-portrait { max-width:320px; justify-self:center; } }
 </style>
 <link rel="stylesheet" href="navigation.css"></head>
 
@@ -249,15 +250,13 @@
 
 <header><div class="logo"><a href="index.html">EIGEN<span class="accent">WIJERS</span></a></div><nav aria-label="Hoofdnavigatie"><a href="index.html" aria-current="page">Home</a><a href="over-mij.html">Over mij</a><a href="mijn-werk.html">Mijn werk</a><a href="eigen-wijze.html">Eigen wijze</a><a href="buiten-het-werk.html">Buiten het werk</a><a href="recepten.html">Recepten</a><a href="contact.html">Contact</a></nav></header>
 
-<section class="hero" id="over">
-  <div class="hero-content">
+<section class="hero" id="over"><div class="home-intro"><div class="hero-content">
     <h1>Marcel Wijers.<br><span class="accent">Op mijn eigen wijze.</span></h1>
     <h2>Welkom op mijn persoonlijke website.</h2>
     <p>Ik woon in Meerhoven, in Eindhoven. Ik geniet van mijn gezin, een wandeling met Jip en iets lekkers op tafel. In de keuken, bij de barbecue en in mijn werk probeer ik graag dingen uit en zoek ik uit wat voor mij werkt.</p>
     <a class="button" href="over-mij.html">Meer over mij</a>
     <a class="button button-outline" href="recepten.html">Bekijk mijn recepten</a>
-  </div>
-</section>
+  </div><figure class="home-portrait"><img src="Images/profiel/marcel-wijers.webp" alt="Portret van Marcel Wijers" width="1200" height="800" fetchpriority="high" decoding="async"></figure></div></section>
 
 <section class="section" aria-labelledby="ontdekken">
   <h2 id="ontdekken">Wat je hier vindt</h2>
