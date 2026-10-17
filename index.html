@@ -247,7 +247,7 @@
 
 <body>
 
-<header><div class="logo"><a href="index.html">EIGEN<span class="accent">WIJERS</span></a></div><nav aria-label="Hoofdnavigatie"><a href="index.html" aria-current="page">Home</a><a href="over-mij.html">Over mij</a><a href="index.html#werk">Mijn werk</a><a href="index.html#eigenwijze">Eigen wijze</a><a href="buiten-het-werk.html">Buiten het werk</a><a href="recepten.html">Recepten</a><a href="contact.html">Contact</a></nav></header>
+<header><div class="logo"><a href="index.html">EIGEN<span class="accent">WIJERS</span></a></div><nav aria-label="Hoofdnavigatie"><a href="index.html" aria-current="page">Home</a><a href="over-mij.html">Over mij</a><a href="mijn-werk.html">Mijn werk</a><a href="eigen-wijze.html">Eigen wijze</a><a href="buiten-het-werk.html">Buiten het werk</a><a href="recepten.html">Recepten</a><a href="contact.html">Contact</a></nav></header>
 
 <section class="hero" id="over">
   <div class="hero-content">
@@ -281,17 +281,9 @@
   </div>
 </section>
 
-<section class="eigenwijze" id="eigenwijze">
-  <div>
-    <h2>Mijn eigen wijze</h2>
-    <p>Een recept aanpassen, een andere bereiding uitproberen of zelf iets maken. Ik wil graag begrijpen hoe iets werkt. Wat ik onderweg leer, deel ik hier. Ook de verhalen die bij een gerecht horen, zoals de lessen van ons pap, die bakker was.</p>
-  </div>
-</section>
 
-<section class="section" id="werk">
-  <h2>En mijn werk?</h2>
-  <p class="work-intro">Ik werk als serviceplanner bij B&amp;G Hekwerk. Plannen en organiseren passen bij mij. Ik houd van overzicht, duidelijke afspraken en contact met de mensen met wie ik werk.</p>
-</section>
+
+
 
 <section class="contact" id="contact">
   <h2>Laat gerust van je horen</h2>
@@ -313,6 +305,6 @@
   window.addEventListener('resize', updateHeaderHeight);
   if ('ResizeObserver' in window) new ResizeObserver(updateHeaderHeight).observe(siteHeader);
 </script>
-</body>
+<script>const previousSections={"#werk":"mijn-werk.html","#eigenwijze":"eigen-wijze.html"};if(previousSections[location.hash])location.replace(previousSections[location.hash]);</script></body>
 </html>
 

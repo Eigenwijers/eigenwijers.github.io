@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mijn werk | Marcel Wijers</title>
+  <meta name="description" content="Marcel Wijers over zijn werk als serviceplanner bij B&amp;G Hekwerk.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #263238;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #17324d;
+      color: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #7dd3c2;
+    }
+
+    .hero {
+      padding: 110px 8%;
+      background: #f3f5f6;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      margin: 0 0 15px;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      color: #17324d;
+    }
+
+    .hero h2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin: 0 0 30px;
+      color: #52606a;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 19px;
+    }
+
+    .accent {
+      color: #16866f;
+    }
+
+    .section {
+      padding: 75px 8%;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #17324d;
+      font-size: 32px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      border-top: 4px solid #16866f;
+      padding: 25px 5px;
+    }
+
+    .card h3 {
+      color: #17324d;
+      font-size: 21px;
+    }
+
+    .eigenwijze {
+      background: #17324d;
+      color: white;
+      padding: 75px 8%;
+    }
+
+    .eigenwijze div {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .eigenwijze h2 {
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    .quote {
+      font-size: 25px;
+      line-height: 1.5;
+      max-width: 850px;
+    }
+
+    .buitenwerk {
+      padding: 80px 8%;
+      text-align: center;
+      background: #f3f5f6;
+    }
+
+    .buitenwerk-content {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .buitenwerk h2 {
+      color: #17324d;
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    .buitenwerk p {
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background: #16866f;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 3px;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 70px 8%;
+    }
+
+    .contact a {
+      color: #16866f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #f3f5f6;
+      color: #65727a;
+      font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+
+      .buitenwerk {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+    }
+
+    /* Houd de navigatie bereikbaar tijdens het scrollen. */
+    html { scroll-padding-top: calc(var(--header-height, 100px) + 16px); }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+    }
+    header nav a {
+      margin-left: 0;
+      padding: 6px 0;
+      white-space: nowrap;
+    }
+    header nav a:focus-visible {
+      outline: 2px solid #7dd3c2;
+      outline-offset: 4px;
+    }
+    @media (max-width: 1000px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 8%;
+      }
+      header nav {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 18px;
+      }
+      header nav a { flex-shrink: 0; }
+    }
+  .hero .button { margin-right:12px; } .button-outline { color:#16866f; background:transparent; border:1px solid #16866f; } .text-link { color:#14755f; font-weight:bold; text-decoration:none; } .text-link:hover { text-decoration:underline; } .work-intro { max-width:780px; font-size:18px; }
+.content-page { max-width:1000px; min-height:55vh; } .content-page h1 { color:#17324d; font-size:clamp(36px,5vw,56px); line-height:1.15; margin:0 0 28px; } .content-page p { max-width:780px; font-size:19px; }
+</style>
+<link rel="stylesheet" href="navigation.css"></head>
+
+<body>
+
+<header><div class="logo"><a href="index.html">EIGEN<span class="accent">WIJERS</span></a></div><nav aria-label="Hoofdnavigatie"><a href="index.html">Home</a><a href="over-mij.html">Over mij</a><a href="mijn-werk.html" aria-current="page">Mijn werk</a><a href="eigen-wijze.html">Eigen wijze</a><a href="buiten-het-werk.html">Buiten het werk</a><a href="recepten.html">Recepten</a><a href="contact.html">Contact</a></nav></header>
+
+<main class="section content-page">
+  <h1>Mijn werk</h1>
+  <p class="work-intro">Ik werk als serviceplanner bij B&amp;G Hekwerk. Plannen en organiseren passen bij mij. Ik houd van overzicht, duidelijke afspraken en contact met de mensen met wie ik werk.</p>
+</main>
+<footer>
+  © 2026 Marcel Wijers · eigenwijers.nl
+</footer>
+
+
+<script>
+  // Gebruik de werkelijke menuhoogte voor links naar secties.
+  const siteHeader = document.querySelector('header');
+  const updateHeaderHeight = () => {
+    document.documentElement.style.setProperty('--header-height', siteHeader.offsetHeight + 'px');
+  };
+  updateHeaderHeight();
+  window.addEventListener('resize', updateHeaderHeight);
+  if ('ResizeObserver' in window) new ResizeObserver(updateHeaderHeight).observe(siteHeader);
+</script>
+</body>
+</html>
+
