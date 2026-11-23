@@ -236,8 +236,15 @@
   }
 
   .home-hero__portrait {
-    width: min(100%, 360px);
+    width: min(88vw, 360px);
     justify-self: center;
+  }
+
+  .home-hero__portrait img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
   }
 
   .home-hero__copy h1 { font-size: clamp(41px, 12vw, 58px); }
